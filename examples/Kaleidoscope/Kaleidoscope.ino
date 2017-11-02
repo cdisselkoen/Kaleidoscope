@@ -15,7 +15,6 @@
 #include "Kaleidoscope-LEDEffect-Breathe.h"
 #include "Kaleidoscope-LEDEffect-Chase.h"
 #include "Kaleidoscope-LEDEffect-Rainbow.h"
-#include "Kaleidoscope-Model01-TestMode.h"
 
 #define NUMPAD_KEYMAP 2
 
@@ -87,8 +86,7 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
 void setup() {
   Kaleidoscope.setup();
 
-  Kaleidoscope.use(&TestMode,
-                   &LEDControl, &LEDOff,
+  Kaleidoscope.use(&LEDControl, &LEDOff,
                    &solidRed, &solidOrange, &solidYellow, &solidGreen, &solidBlue, &solidIndigo, &solidViolet,
                    &LEDBreatheEffect, &LEDRainbowEffect, &LEDChaseEffect, &NumLock,
 
